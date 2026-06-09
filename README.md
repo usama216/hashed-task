@@ -2,9 +2,9 @@
 
 Hashed System frontend assignment — login, dashboard stats, user table with search/pagination, and add/edit/view modals. Built on [reqres.in](https://reqres.in).
 
-**Live URL:** _(add after Vercel deploy)_
+**Live URL:** [https://hashed-task.vercel.app](https://hashed-task.vercel.app)
 
-**Repo:** _(add GitHub/GitLab link)_
+**Repo:** [https://github.com/usama216/hashed-task](https://github.com/usama216/hashed-task)
 
 ---
 

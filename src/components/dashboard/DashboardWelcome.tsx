@@ -13,6 +13,7 @@ export function DashboardWelcome() {
 
   return (
     <div className="relative overflow-hidden rounded-2xl bg-brand-dark px-6 py-6 sm:px-8 sm:py-7">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-brand/35 via-transparent to-brand-muted/25" />
       <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-brand/25 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-16 right-1/3 h-28 w-28 rounded-full bg-brand-muted/20 blur-2xl" />
 

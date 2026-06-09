@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "reqres.in",
         pathname: "/img/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
 };

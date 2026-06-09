@@ -11,21 +11,13 @@ export function DashboardHeader() {
   const initial = email ? email.charAt(0).toUpperCase() : "?";
 
   return (
-    <header className="sticky top-0 z-40 border-b border-brand-light/80 bg-white/90 shadow-sm shadow-brand-dark/5 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-brand-light bg-white/90 shadow-sm shadow-brand-dark/5 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <div className="flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-dark text-[10px] font-bold text-white shadow-sm shadow-brand-dark/30">
-            HS
-          </div>
-          <div>
-            <span className="text-sm font-semibold tracking-tight text-brand-dark">Hashed System</span>
-            <p className="text-[11px] text-zinc-400">User management</p>
-          </div>
-        </div>
+        <p className="text-sm font-semibold tracking-tight text-brand-dark">Dashboard</p>
 
         <div className="flex items-center gap-2 sm:gap-3">
           {email && (
-            <div className="hidden items-center gap-2 rounded-full border border-brand-light bg-brand-light/40 py-1 pl-1 pr-3 sm:flex">
+            <div className="hidden items-center gap-2 rounded-full border border-brand/20 bg-brand-light py-1 pl-1 pr-3 sm:flex">
               <div className="flex h-7 w-7 items-center justify-center rounded-full bg-brand text-xs font-semibold text-white">
                 {initial}
               </div>

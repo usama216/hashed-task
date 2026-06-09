@@ -2,16 +2,21 @@
 
 @theme inline {
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
-  --color-brand: #0d99ff;
-  --color-brand-hover: #0b87e0;
-  --color-brand-dark: #1e4470;
-  --color-brand-dark-hover: #173a5e;
-  --color-brand-light: #e8f4fd;
-  --color-brand-muted: #6eb8f0;
+  --color-brand: #f05a45;
+  --color-brand-hover: #e04f3c;
+  --color-brand-dark: #1a1520;
+  --color-brand-dark-hover: #141018;
+  --color-brand-light: #fff5f3;
+  --color-brand-muted: #f5b942;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.landing-container {
+  width: 90%;
+  margin-inline: auto;
 }
 
 body {
@@ -21,8 +26,8 @@ body {
 }
 
 ::selection {
-  background-color: #e8f4fd;
-  color: #1e4470;
+  background-color: #fff5f3;
+  color: #f05a45;
 }
 
 @keyframes fade-up {
@@ -62,15 +67,31 @@ body {
 
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgb(13 153 255 / 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(13 153 255 / 0.07) 1px, transparent 1px);
+    linear-gradient(to right, rgb(240 90 69 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(240 90 69 / 0.06) 1px, transparent 1px);
   background-size: 48px 48px;
   background-position: center top;
 }
 
+.hero-bg {
+  background-color: #1a1520;
+  background-image: url("/assets/HeroSection/hero-section.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.featured-venues-bg {
+  background-color: #0c1018;
+  background-image: url("/assets/features/features-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 [data-sonner-toaster] [data-sonner-toast] {
   border-radius: 10px;
-  border: 1px solid #cce9fc;
-  box-shadow: 0 4px 12px rgb(30 68 112 / 0.08);
+  border: 1px solid #fdd9d4;
+  box-shadow: 0 4px 12px rgb(240 90 69 / 0.1);
   font-family: var(--font-sans);
 }

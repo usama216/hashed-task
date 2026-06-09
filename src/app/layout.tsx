@@ -10,14 +10,14 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "User Dashboard",
-  description: "User management dashboard",
+  title: "venuze",
+  description: "Find and celebrate in venues big and small",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geist.variable} h-full`}>
-      <body className="min-h-full bg-brand-light/20 text-brand-dark antialiased">
+      <body className="min-h-full w-full overflow-x-hidden bg-brand-light/20 text-brand-dark antialiased">
         <StoreProvider>
           {children}
           <Toaster position="top-right" richColors closeButton />

@@ -6,6 +6,7 @@ import "./globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
+  variable: "--font-geist",
 });
 
 export const metadata: Metadata = {
@@ -15,11 +16,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.className} h-full`}>
-      <body className="min-h-full bg-slate-50 text-slate-900">
+    <html lang="en" className={`${geist.variable} h-full`}>
+      <body className="min-h-full bg-brand-light/20 text-brand-dark antialiased">
         <StoreProvider>
           {children}
-          <Toaster position="top-right" />
+          <Toaster position="top-right" richColors closeButton />
         </StoreProvider>
       </body>
     </html>

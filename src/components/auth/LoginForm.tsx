@@ -42,7 +42,7 @@ export function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <Input
         label="Email"
         type="email"
@@ -59,11 +59,13 @@ export function LoginForm() {
       />
 
       {error && (
-        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-600">{error}</p>
+        <p className="rounded-lg border border-red-200 bg-red-50 px-3.5 py-2.5 text-sm text-red-700">
+          {error}
+        </p>
       )}
 
       <Button type="submit" className="w-full" loading={isLoading}>
-        Login
+        Sign in
       </Button>
     </form>
   );

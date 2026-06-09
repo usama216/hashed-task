@@ -8,9 +8,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const styles = {
-  primary: "bg-indigo-600 text-white hover:bg-indigo-700",
-  secondary: "border border-slate-200 bg-white hover:bg-slate-50",
-  ghost: "text-slate-600 hover:bg-slate-100",
+  primary:
+    "bg-brand text-white shadow-sm shadow-brand/25 hover:bg-brand-hover active:bg-brand-dark",
+  secondary:
+    "border border-brand-light bg-white text-brand-dark shadow-sm hover:border-brand-muted/40 hover:bg-brand-light/50",
+  ghost: "text-zinc-600 hover:bg-brand-light/60 hover:text-brand-dark",
 };
 
 export function Button({
@@ -25,8 +27,8 @@ export function Button({
   return (
     <button
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-md font-medium disabled:opacity-50",
-        size === "sm" ? "px-3 py-1.5 text-sm" : "px-4 py-2 text-sm",
+        "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors duration-150 disabled:pointer-events-none disabled:opacity-40",
+        size === "sm" ? "px-3 py-1.5 text-xs" : "px-4 py-2.5 text-sm",
         styles[variant],
         className,
       )}

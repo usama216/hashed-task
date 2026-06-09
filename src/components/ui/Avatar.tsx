@@ -23,7 +23,7 @@ export function Avatar({ src, alt, size = "md" }: AvatarProps) {
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-full bg-slate-100 ring-2 ring-white",
+        "relative shrink-0 overflow-hidden rounded-full bg-brand-light ring-1 ring-brand/20",
         sizes[size],
       )}
     >

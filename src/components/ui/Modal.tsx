@@ -31,21 +31,36 @@ export function Modal({ open, onClose, title, children, size = "md" }: ModalProp
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/40" onClick={onClose} />
+      <div
+        className="absolute inset-0 bg-brand-dark/50 backdrop-blur-[2px]"
+        onClick={onClose}
+      />
       <div
         className={cn(
-          "relative w-full rounded-lg bg-white shadow-lg",
+          "animate-modal-in relative w-full overflow-hidden rounded-2xl bg-white shadow-2xl shadow-brand-dark/15 ring-1 ring-brand-dark/10",
           size === "md" && "max-w-md",
           size === "lg" && "max-w-lg",
         )}
       >
-        <div className="flex items-center justify-between border-b px-4 py-3">
-          <h2 className="font-medium">{title}</h2>
-          <button type="button" onClick={onClose} className="text-slate-400 hover:text-slate-600">
-            ✕
+        <div className="flex items-center justify-between border-b border-brand-light px-5 py-4">
+          <h2 className="text-sm font-semibold tracking-tight text-brand-dark">{title}</h2>
+          <button
+            type="button"
+            onClick={onClose}
+            className="flex h-7 w-7 items-center justify-center rounded-md text-zinc-400 transition-colors hover:bg-brand-light hover:text-brand-dark"
+            aria-label="Close"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+              <path
+                d="M1 1l12 12M13 1L1 13"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </svg>
           </button>
         </div>
-        <div className="p-4">{children}</div>
+        <div className="p-5">{children}</div>
       </div>
     </div>
   );
